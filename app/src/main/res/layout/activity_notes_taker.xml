@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A1239"
+    android:padding="10dp"
+    tools:context=".NotesTakerActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_notes"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:id="@+id/imageView_save"
+                android:padding="8dp"
+                android:src="@drawable/blue_btn"
+                android:layout_width="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <ImageView
+                android:layout_alignParentStart="true"
+                android:id="@+id/imageView_search"
+                android:padding="8dp"
+                android:src="@drawable/blue_btn"
+                android:layout_width="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:layout_height="?attr/actionBarSize"/>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:fontFamily="serif"
+                    android:id="@+id/todayDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="left"
+                    android:text="18 Apr 2023"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="right"
+                    android:text="🥰"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:inputType="text"
+                android:fontFamily="serif"
+                android:textColor="#fff"
+                android:textColorHint="#A7A9B5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText_title"
+                android:hint="Title"
+                android:background="#0A1239"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_margin="0dp"/>
+
+            <EditText
+                android:id="@+id/editText_notes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:background="#0A1239"
+                android:fontFamily="serif"
+                android:gravity="top"
+                android:hint="Write more here..."
+                android:padding="5dp"
+                android:textColor="#fff"
+                android:textColorHint="#A7A9B5" />
+
+            <!--            android:lines="10"-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
