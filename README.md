@@ -16,3 +16,6 @@ MyMemoir is a personal journal app developed using Android Studio and SQLite. It
 - Java programming language
 - SQLite database for data storage
 
+## 
+![My GIF](MyMemoir.gif)
+
